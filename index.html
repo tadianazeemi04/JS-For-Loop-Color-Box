@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS For Loop</title>
+</head>
+<style>
+    p {
+        display: block;
+        margin: 10px;
+        padding: 18px;
+        font-weight: 800;
+        font-family: sans-serif;
+        font-size: 1.4rem;
+        color: azure;
+        line-height: 2;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div id="colorBox"></div>
+
+    <script>
+        const box = document.getElementById("colorBox");
+        let r = 0, g = 0, b = 0;
+        
+
+        for (let r = 0; r <= 255; r += 10) {
+            for (let g = 0; g <= 255; g += 10) {
+                for (let b = 0; b <= 255; b += 10) {
+                    const para = document.createElement("p");
+                    para.textContent = `This is para with color style rgb(${r}, ${g}, ${b})<br>`;
+                    para.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                    box.appendChild(para);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
